@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  match '/contacts', to: 'contacts#new', via: 'get' 
+  match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
+
+  match '/blackwing', to: 'blackwing#index', via: 'get' 
 
 end
