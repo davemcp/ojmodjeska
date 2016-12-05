@@ -1,10 +1,6 @@
 class ContactsController < ApplicationController
-  def new
-    @contact = Contact.new
-  end
 
   def create
-    # byebug
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
